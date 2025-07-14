@@ -1,5 +1,5 @@
-
-
+#Vimag
+![Vimag](./src/icons/Vimag.png)
 # xmake编译项目
 ## Debug模式
 ```xmake config -m debug```
@@ -24,7 +24,7 @@ xmake run VIMAG 或者 xmake run VIMAG image-path/dist
 # VIMAG
 
 
-## 格式支持
+## Vimag格式支持
    - 支持多种图像格式（JPG/JPEG/PNG/BMP/GIF/TGA/HDR/PSD）
 ## 快捷键
 [鼠标]/[键盘]
