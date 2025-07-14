@@ -64,6 +64,7 @@ bool VimagApp::initialize(int argc, char** argv) {
     window.getFramebufferSize(currentWindowWidth, currentWindowHeight);
     
     createUI();
+    
     setupEventHandlers();
     
     return true;
@@ -149,6 +150,7 @@ void VimagApp::run() {
         
         // 定时器检查
         if (timer.check()) {
+            updateImageLabels();
             updateWindowSize();
         }
         
@@ -399,12 +401,12 @@ void VimagApp::updateImageLabels() {
     
     if (texture->isLoadError()) {
         
-        indexLabel->setText(imageName+" -> "+indexString + " LOAD FAIL!");
-        texture -> setImagePath(window.getNVGContext(),"./imageFail.png");
+        indexLabel->setText(indexString+" -> "+ imageName + "●●● LOAD FAIL! ●●●");
+        texture -> setImagePath(window.getNVGContext(),"./imageFail.gif");
     } else {
         if (!showIndex) indexString = "";
         if (!imageNameDisplay) imageName = "";
-        label_info = imageName+"  "+indexString;
+        label_info = indexString +" ● " + imageName + " ● " + std::to_string(texture->getImageWidth()) + "x" + std::to_string(texture->getImageHeight());
 
         std::string exif_info;
         bool ExifInfo_S = getExifInfo(imagePaths[currentIndex].generic_string(), exif_info,textureOrientation);
