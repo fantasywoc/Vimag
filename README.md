@@ -1,5 +1,7 @@
 # Vimag
-![logo](./src/icons/logo.png)        <!-- 语言使用排行 -->
+![logo](./src/icons/logo.png)      
+
+<!-- 语言使用排行 -->
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=fantasywoc&repo=Vimag&layout=compact&theme=radical)](https://github.com/fantasywoc/Vimag) 
 
 # xmake编译项目
