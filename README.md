@@ -19,7 +19,7 @@ xmake run VIMAG 或者 xmake run VIMAG image-path/dist
 ```
 
 
-![logo](.\src\icons\logo.png)
+![logo](./src/icons/logo.png)
 
 # VIMAG
 
