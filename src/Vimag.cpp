@@ -11,9 +11,10 @@
 #endif
 
 int main(int argc, char** argv) {
+
+#ifdef _WIN32
     // 隐藏控制台窗口
     FreeConsole();
-#ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     std::cout << "Windows UTF-8" << std::endl;
