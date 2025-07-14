@@ -10,13 +10,16 @@
 ## 清理构建
 ```xmake clean```
 
+## 编译库配置
+```xmake g --pkg_searchdirs=./src/thrity_party/```  #本地库文件搜索路径
 ## 编译
-```xmake g --pkg_searchdirs=./src/thrity_party/```  -- 本地库文件搜索路径
+```
+xmake
+xmake run VIMAG 或者 xmake run VIMAG image-path/dist
+```
 
-```xmake ```
-```xmake run VIMAG 或者 xmake run VIMAG image-path/dist```
 
-
+![logo](.\src\icons\logo.png)
 
 # VIMAG
 
@@ -32,6 +35,17 @@
 - 中键||"F"：窗口最大化/最小化
 - 右键单击：打开设置面板
 - 鼠标移入窗口上边缘：显示标题栏
+
+- **预览**：选中图片后，空格预览/关闭预览图像(仅支持windows)(需要启用Vimag_hook)
+[windows Vimag_hook]
+windows 运行dist/Vimag_hook 可以启用预览钩子,
+**Vimag_hook需要和Vimag放在同一目录下**
+资源浏览器里面选中所支持的图像格式点击**空格**可以预览图像
+- 托盘可以配置
+    - 启用/禁止
+    - 开始/暂停
+    - 开机自启
+    - 开启/关闭控制台(仅供简单调试使用)
 
 ## 项目结构
 
