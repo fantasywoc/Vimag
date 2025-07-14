@@ -1,8 +1,7 @@
 # Vimag
 ![logo](./src/icons/logo.png)      
 
-<!-- 语言使用排行 -->
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=fantasywoc&repo=Vimag&layout=compact&theme=radical)](https://github.com/fantasywoc/Vimag) 
+
 
 # xmake编译项目
 ## Debug模式
@@ -155,13 +154,17 @@ xmake project -k compile_commands
 ```
 若文件在根目录，则路径改为 ${workspaceFolder}
 
-<!-- 核心统计卡片 -->
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true&theme=dark)](https://github.com/fantasywoc/Vimag)
 
 
+## 📊 动态统计
+| 项目概览 | 技术栈 |
+|----------|--------|
+| [![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() | [![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fantasywoc&repo=Vimag&layout=compact)]() |
 
-<!-- 仓库置顶卡片（示例） -->
-[![Vimag](https://github-readme-stats.vercel.app/api/pin/?username=fantasywoc&repo=Vimag)](https://github.com/fantasywoc/Vimag)
+## 🔍 流量监控
+![Views](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/fantasywoc/Vimag/traffic/views&query=$.count&label=Repo%20Views)
+
+
 
 ## 许可证
 
