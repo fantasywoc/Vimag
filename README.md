@@ -6,8 +6,7 @@
 [![Feature Requests](https://img.shields.io/github/issues/fantasywoc/Vimag/feature-request?label=Features&color=4CC61E&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request)
 [![Bugs](https://img.shields.io/github/issues/fantasywoc/Vimag/bug?label=Bugs&color=red&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 [![Downloads](https://img.shields.io/github/downloads/fantasywoc/Vimag/total?label=Downloads)](https://github.com/fantasywoc/Vimag/releases)
-[![Stars](https://img.shields.io/github/stars/fantasywoc/Vimag?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
-[![Forks](https://img.shields.io/github/forks/fantasywoc/Vimag?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
+
 
 
 <a href="https://dyblog.online/"><img src="https://img.shields.io/badge/Author-Fantasy-orange" alt="Author" /></a>
@@ -17,6 +16,8 @@
 
 <h3>完全开源免费的轻量图像查看软件</h3>
 </div>
+
+
 # xmake编译项目
 ## Debug模式
 ```xmake config -m debug```
@@ -171,14 +172,18 @@ xmake project -k compile_commands
 
 
 ## 📊 动态统计
-[![GitHub Stars](https://img.shields.io/github/stars/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/network/members)
+[![Stars](https://img.shields.io/github/stars/fantasywoc/Vimag?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
+[![Forks](https://img.shields.io/github/forks/fantasywoc/Vimag?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
 
+## ⭐ 星标历史 Star History
 
-项目概览 
-
-[![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() 
-
+<a href="https://star-history.com/#fantasywoc/Vimag&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=fantasywoc/Vimag&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=fantasywoc/Vimag&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=fantasywoc/Vimag&type=Date" />
+ </picture>
+</a>
 
 
 
