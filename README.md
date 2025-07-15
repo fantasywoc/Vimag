@@ -165,7 +165,7 @@ xmake project -k compile_commands
 [![GitHub Forks](https://img.shields.io/github/forks/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/network/members)
 | 项目概览 | 技术栈 |
 |----------|--------|
-| [![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() | [![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fantasywoc&repo=Vimag&layout=compact)]() |
+| [![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() | [![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fantasywoc&layout=compact&cache_seconds=1800)]() |
 
 
 
