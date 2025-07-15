@@ -416,7 +416,10 @@ void VimagApp::updateImageLabels() {
                 if(textureOrientation != -100){
                         if(textureOrientation==90 || textureOrientation==-90){
                         float scaleOrientation = currentWindowHeight/texture->getWidth() + 0.05;
-                        texture->scaleTo(scaleOrientation,scaleOrientation,0.01);
+                        scaleX =    scaleOrientation;
+                        scaleY =    scaleOrientation;
+
+                        texture->scaleTo(scaleX,scaleOrientation,0.01);
                     }else{
                         texture->scaleTo(1,1,0.01) ;
                     }
@@ -755,6 +758,9 @@ void VimagApp::resetImageTransform() {
         if(textureOrientation==90 || textureOrientation==-90){
             float scaleOrientation = currentWindowHeight/texture->getWidth() + 0.00;
             // texture->scaleTo(scaleOrientation,scaleOrientation,0.01);
+            scaleX = scaleOrientation;
+            scaleY = scaleOrientation;
+
             UIAnimationManager::getInstance().scaleTo(texture.get(), scaleOrientation, scaleOrientation, 0.35f, UIAnimation::EASE_OUT);
         }
     }else{
