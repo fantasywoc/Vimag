@@ -1,10 +1,4 @@
 # Vimag
-<<<<<<< HEAD
-
-[TOC]
-
-![Vimag](./src/icons/Vimag.png)
-=======
 ![logo](./src/icons/logo.png)      
 
 [![Feature Requests](https://img.shields.io/github/issues/fantasywoc/Vimag/feature-request?label=Features&color=4CC61E&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request)
@@ -13,7 +7,6 @@
 [![Stars](https://img.shields.io/github/stars/fantasywoc/Vimag?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
 [![Forks](https://img.shields.io/github/forks/fantasywoc/Vimag?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
 
->>>>>>> 2f8dac4796e7ceed226bd0b0505ada82f6d77871
 # xmake编译项目
 ## Debug模式
 ```xmake config -m debug```
