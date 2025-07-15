@@ -389,8 +389,9 @@ void VimagApp::updateImageDisplay() {
     std::string imagePath = imagePaths[currentIndex].generic_string();
     texture->setImagePath(window.getNVGContext(), imagePath);
     
-    updateImageLabels();
+    
     updateWindowSize();
+    updateImageLabels();
 }
 
 void VimagApp::updateImageLabels() {
@@ -400,9 +401,8 @@ void VimagApp::updateImageLabels() {
     std::string imageName = imageNames[currentIndex];
     
     if (texture->isLoadError()) {
-        
-        indexLabel->setText(indexString+" -> "+ imageName + "●●● LOAD FAIL! ●●●");
         texture -> setImagePath(window.getNVGContext(),"./imageFail.gif");
+        indexLabel->setText(indexString+" -> "+ imageName + "●●● LOAD FAIL! ●●●");
     } else {
         if (!showIndex) indexString = "";
         if (!imageNameDisplay) imageName = "";
@@ -431,6 +431,7 @@ void VimagApp::updateImageLabels() {
         }
         indexLabel->setText(label_info);
     }
+     
       
 }
 

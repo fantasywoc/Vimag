@@ -30,15 +30,27 @@ target("ui")
     add_includedirs("src", "src/component", "src/animation","src/utils","src/TinyEXIF")
     add_packages("glfw", "nanovg", "glew")
 
+-- 手动创建多尺寸ICO：
+-- 将转换后的 `Vimag.ico` 文件放置在 `src/icons/` 目录下。
+
+-- 2. 修改xmake.lua配置
+
+-- 更新构建配置以支持Windows资源编译：
 -- 定义图片查看器演示程序目标
 target("VIMAG")
     set_kind("binary")
     add_rpathdirs("$ORIGIN")
     add_files("src/Vimag.cpp","src/TinyEXIF/TinyEXIF.cpp","src/component/TextureCache.cpp","src/VimagApp.cpp")
+    
+    -- 添加Windows资源文件
+    if is_plat("windows") then
+        add_files("src/Vimag.rc")
+    end
+    
     add_deps("ui")
     add_packages("glfw", "nanovg", "glew")
     
-    add_includedirs("src", "src/component", "src/widget", "src/animation", "src/TinyEXIF")
+    add_includedirs("src", "src/component", "src/animation", "src/TinyEXIF")
     
     if is_plat("windows") then
         add_cxflags("/utf-8")
@@ -127,9 +139,15 @@ target("dist_package")
         -- 2. 智能复制依赖库
         smart_copy_package_dlls()
 
+        -- 3. 更新打包配置
+        
+      
+        -- 在 dist_package target 的 on_build 函数中添加
         -- 3. 复制资源文件
         os.trycp("src/font/*.ttc", "dist")
         os.trycp("src/icons/*.png", "dist")
+        os.trycp("src/icons/*.ico", "dist")  -- 添加这行
+        os.trycp("src/icons/*.gif", "dist")
         os.trycp("config.ini", "dist")
         print("🚀 打包完成！")
     end)

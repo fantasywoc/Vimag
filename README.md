@@ -1,4 +1,7 @@
 # Vimag
+
+[TOC]
+
 ![Vimag](./src/icons/Vimag.png)
 # xmake编译项目
 ## Debug模式
@@ -118,26 +121,26 @@ UI/
 - 透明帧缓冲区支持
 - 灵活的窗口配置选项
 
- 
+
 # xmake 代码提示和补全配置
 ## clangd 配置xmake 代码提示和补全
 ## clangd安装
 (以 VSCode 为例)安装 ​**vscode-clangd**​ 插件（在扩展商店搜索安装）
 然后下载安装⏬```https://github.com/llvm/llvm-project/releases``` ,bin路径添加到环境变量
 ##配置xmake(​核心配置步骤​)
-1. ​生成 compile_commands.json（编译数据库）​​
+1. 生成 compile_commands.json（编译数据库）​​
 
-​自动更新​：在 xmake.lua 中添加规则：
+自动更新​：在 xmake.lua 中添加规则：
 ```lua
 add_rules("plugin.compile_commands.autoupdate", { outputdir = ".vscode" })
 ```
-​手动生成​：在项目根目录执行：
+手动生成​：在项目根目录执行：
 ```bash
 xmake project -k compile_commands
 ```
 默认生成在项目根目录，可通过 --outputdir=.vscode 指定输出到 .vscode 目录。
 每次编译时自动更新该文件。
-2. ​ 配置 VS Code 的 Clangd 插件​
+2.  配置 VS Code 的 Clangd 插件​
 在 .vscode/settings.json 中指定编译数据库路径：
 
 ```json
