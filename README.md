@@ -1,5 +1,7 @@
 # VIMAG 轻量图片查看工具
-![logo](./src/icons/logo.png)      
+    
+<div align=center>
+<img src="./src/icons/logo.png" width="150" height="150">
 
 [![Feature Requests](https://img.shields.io/github/issues/fantasywoc/Vimag/feature-request?label=Features&color=4CC61E&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request)
 [![Bugs](https://img.shields.io/github/issues/fantasywoc/Vimag/bug?label=Bugs&color=red&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
@@ -7,6 +9,14 @@
 [![Stars](https://img.shields.io/github/stars/fantasywoc/Vimag?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
 [![Forks](https://img.shields.io/github/forks/fantasywoc/Vimag?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
 
+
+<a href="https://dyblog.online/"><img src="https://img.shields.io/badge/Author-Fantasy-orange" alt="Author" /></a>
+<img src="https://img.shields.io/github/languages/count/fantasywoc/Vimag" alt="languages-count" />
+<img src="https://img.shields.io/github/languages/top/fantasywoc/Vimag?color=yellow" alt="languages-top" />
+<img src="https://img.shields.io/github/last-commit/fantasywoc/Vimag" alt="last-commit" />
+
+<h3>完全开源免费的轻量图像查看软件</h3>
+</div>
 # xmake编译项目
 ## Debug模式
 ```xmake config -m debug```
