@@ -1,8 +1,19 @@
 # Vimag
+<<<<<<< HEAD
 
 [TOC]
 
 ![Vimag](./src/icons/Vimag.png)
+=======
+![logo](./src/icons/logo.png)      
+
+[![Feature Requests](https://img.shields.io/github/issues/fantasywoc/Vimag/feature-request?label=Features&color=4CC61E&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request)
+[![Bugs](https://img.shields.io/github/issues/fantasywoc/Vimag/bug?label=Bugs&color=red&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+[![Downloads](https://img.shields.io/github/downloads/fantasywoc/Vimag/total?label=Downloads)](https://github.com/fantasywoc/Vimag/releases)
+[![Stars](https://img.shields.io/github/stars/fantasywoc/Vimag?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
+[![Forks](https://img.shields.io/github/forks/fantasywoc/Vimag?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
+
+>>>>>>> 2f8dac4796e7ceed226bd0b0505ada82f6d77871
 # xmake编译项目
 ## Debug模式
 ```xmake config -m debug```
@@ -22,7 +33,7 @@ xmake run VIMAG 或者 xmake run VIMAG image-path/dist
 ```
 
 
-![logo](./src/icons/logo.png)
+
 
 # VIMAG
 
@@ -153,6 +164,19 @@ xmake project -k compile_commands
 }
 ```
 若文件在根目录，则路径改为 ${workspaceFolder}
+
+
+
+## 📊 动态统计
+[![GitHub Stars](https://img.shields.io/github/stars/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/network/members)
+
+
+项目概览 
+
+[![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() 
+
+
 
 
 ## 许可证
