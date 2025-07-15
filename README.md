@@ -1,4 +1,4 @@
-# Vimag
+# Vimag 轻量图片查看工具
 ![logo](./src/icons/logo.png)      
 
 [![Feature Requests](https://img.shields.io/github/issues/fantasywoc/Vimag/feature-request?label=Features&color=4CC61E&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request)
