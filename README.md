@@ -163,11 +163,11 @@ xmake project -k compile_commands
 ## 📊 动态统计
 [![GitHub Stars](https://img.shields.io/github/stars/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/network/members)
-| 项目概览 | 技术栈 |
-|----------|--------|
-| [![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() | [![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fantasywoc&layout=compact&cache_seconds=1800)]() |
 
 
+项目概览 
+
+[![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() 
 
 
 
