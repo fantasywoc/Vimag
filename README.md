@@ -1,8 +1,11 @@
 # Vimag
 ![logo](./src/icons/logo.png)      
 
-[![GitHub Stars](https://img.shields.io/github/stars/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/network/members)
+[![Feature Requests](https://img.shields.io/github/issues/fantasywoc/Vimag/feature-request?label=Features&color=4CC61E&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request)
+[![Bugs](https://img.shields.io/github/issues/fantasywoc/Vimag/bug?label=Bugs&color=red&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+[![Downloads](https://img.shields.io/github/downloads/fantasywoc/Vimag/total?label=Downloads)](https://github.com/fantasywoc/Vimag/releases)
+[![Stars](https://img.shields.io/github/stars/fantasywoc/Vimag?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
+[![Forks](https://img.shields.io/github/forks/fantasywoc/Vimag?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
 
 # xmake编译项目
 ## Debug模式
@@ -158,6 +161,8 @@ xmake project -k compile_commands
 
 
 ## 📊 动态统计
+[![GitHub Stars](https://img.shields.io/github/stars/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/network/members)
 | 项目概览 | 技术栈 |
 |----------|--------|
 | [![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() | [![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fantasywoc&repo=Vimag&layout=compact)]() |
