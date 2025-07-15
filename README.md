@@ -3,7 +3,8 @@
 <div align=center>
 <img src="./src/icons/logo.png" width="150" height="150">
 
-
+<h1>VIMAG</h1>
+<h3>完全开源免费的轻量图像查看软件</h3>
 <a href="https://dyblog.online/"><img src="https://img.shields.io/badge/Author-Fantasy-orange" alt="Author" /></a>
 <img src="https://img.shields.io/github/languages/count/fantasywoc/Vimag" alt="languages-count" />
 <img src="https://img.shields.io/github/languages/top/fantasywoc/Vimag?color=yellow" alt="languages-top" />
@@ -18,7 +19,7 @@
 
 
 
-<h3>完全开源免费的轻量图像查看软件</h3>
+
 </div>
 
 
