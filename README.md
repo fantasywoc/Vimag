@@ -1,7 +1,8 @@
 # Vimag
 ![logo](./src/icons/logo.png)      
 
-
+[![GitHub Stars](https://img.shields.io/github/stars/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/fantasywoc/Vimag.svg)](https://github.com/fantasywoc/Vimag/network/members)
 
 # xmake编译项目
 ## Debug模式
@@ -161,8 +162,8 @@ xmake project -k compile_commands
 |----------|--------|
 | [![Stats](https://github-readme-stats.vercel.app/api?username=fantasywoc&repo=Vimag&show_icons=true)]() | [![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fantasywoc&repo=Vimag&layout=compact)]() |
 
-## 🔍 流量监控
-![Views](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/fantasywoc/Vimag/traffic/views&query=$.count&label=Repo%20Views)
+
+
 
 
 
