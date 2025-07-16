@@ -111,7 +111,11 @@ void VimagApp::loadImages(const std::string& filePath) {
 void VimagApp::run() {
     OneTimeTimer timer;
     timer.start(1.5);
-    
+    glfwSwapInterval(1); // 强制启用垂直同步
+    // // 确保OpenGL设置正确
+    glEnable(GL_MULTISAMPLE); // 启用多重采样抗锯齿
+    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+    glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
     const double targetFrameTime = 1.0 / Config::TARGET_FPS;
     auto lastTime = glfwGetTime();
     
@@ -119,12 +123,9 @@ void VimagApp::run() {
     if (m_needsDirectoryScan) {
         startBackgroundDirectoryScan();
     }
-    glfwSwapInterval(1); // 强制启用垂直同步
-    // // 确保OpenGL设置正确
-    // glEnable(GL_MULTISAMPLE); // 启用多重采样抗锯齿
-    // glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
-    // glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
+
     while (!window.shouldClose()) {
+  
         auto currentTime = glfwGetTime();
         double deltaTime = currentTime - lastTime;
         
@@ -176,7 +177,7 @@ void VimagApp::run() {
             indexLabel->render(window.getNVGContext());
             window.endFrame();
             window.swapBuffers();
-            glFinish();
+            // 移除 glFinish(); - 让GPU异步处理
         }else{
             // // 局部重绘设置面板
             // if(settingPanel->isDisplay()){  
@@ -389,7 +390,6 @@ void VimagApp::updateImageDisplay() {
     std::string imagePath = imagePaths[currentIndex].generic_string();
     texture->setImagePath(window.getNVGContext(), imagePath);
     
-    
     updateWindowSize();
     updateImageLabels();
 }
@@ -423,12 +423,14 @@ void VimagApp::updateImageLabels() {
 
                         texture->scaleTo(scaleX,scaleOrientation,0.01);
                     }else{
+                        textureOrientation = 0;
                         texture->scaleTo(1,1,0.01) ;
                     }
-                    texture->rotateTo(textureOrientation,0.01);
+                    texture->rotateTo(textureOrientation,0.001);
                 }
             } else{
-                texture->rotateTo(0,0.01);
+                textureOrientation = 0;
+                texture->rotateTo(0,0.001);
             }
         }
         if (showExif) {
@@ -533,12 +535,12 @@ void VimagApp::setupEventHandlers() {
 
 void VimagApp::setupTextureEvents() {
     // 拖拽事件 - 现在可以直接使用成员变量
-    texture->setOnDrag([this](float deltaX, float deltaY) {
-        totalDeltaX += deltaX * 2;
-        totalDeltaY += deltaY * 2;
-        rightPanel->moveTo(totalDeltaX, totalDeltaY, 0.3f);
-        mainPanel->updateLayout();
-    });
+    // texture->setOnDrag([&,this](float deltaX, float deltaY) {
+    //     totalDeltaX += deltaX * 2;
+    //     totalDeltaY += deltaY * 2;
+    //     rightPanel->moveTo(totalDeltaX, totalDeltaY, 0.3f);
+    //     mainPanel->updateLayout();
+    // });
     
     // 滚轮缩放
     texture->setOnScroll([this](float scrollX, float scrollY) {
@@ -615,31 +617,36 @@ void VimagApp::setupWindowEvents() {
         }
     });
     
-    // 设置鼠标移动事件回调 - 添加拖拽功能
+    // 设置鼠标移动事件回调 - 修复拖拽功能
     window.setCursorPosCallback([this](double xpos, double ypos) {
         // 处理拖拽移动
         if (isLeftMousePressed) {
             if (!isDragging) {
-                // 开始拖拽
+                // 开始拖拽 - 初始化位置，不进行移动计算
                 isDragging = true;
+                lastMouseX = xpos;  // 重新设置起始位置
+                lastMouseY = ypos;
             } else {
                 // 计算拖拽偏移
                 double deltaX = xpos - lastMouseX;
                 double deltaY = ypos - lastMouseY;
+                if(scaleX > 1){
+                    // 更新总偏移量
+                    totalDeltaX += static_cast<float>(deltaX * 2);
+                    totalDeltaY += static_cast<float>(deltaY * 2);
+                    
+                    // 移动右侧面板
+                    rightPanel->moveTo(totalDeltaX, totalDeltaY, 0.15f);
+                    texture->setPaintValid(false);
+                    mainPanel->updateLayout();
+                    
+                    std::cout << "拖拽移动: deltaX=" << deltaX << ", deltaY=" << deltaY << std::endl;
+                }
                 
-                // 更新总偏移量
-                totalDeltaX += static_cast<float>(deltaX * 2);
-                totalDeltaY += static_cast<float>(deltaY * 2);
-                
-                // 移动右侧面板
-                rightPanel->moveTo(totalDeltaX, totalDeltaY, 0.3f);
-                mainPanel->updateLayout();
-                
-                std::cout << "拖拽移动: deltaX=" << deltaX << ", deltaY=" << deltaY << std::endl;
+                // 更新鼠标位置
+                lastMouseX = xpos;
+                lastMouseY = ypos;
             }
-            
-            lastMouseX = xpos;
-            lastMouseY = ypos;
             return; // 拖拽时不传递给其他组件
         }
         

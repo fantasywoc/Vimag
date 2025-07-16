@@ -138,6 +138,11 @@ void UIAnimationManager::moveTo(UIComponent* target, float x, float y, float dur
     animation->setOnUpdate([target, startX, startY, x, y](float progress) {
         float currentX = startX + (x - startX) * progress;
         float currentY = startY + (y - startY) * progress;
+        
+        // 添加子像素对齐以减少撕裂
+        currentX = std::round(currentX);
+        currentY = std::round(currentY);
+        
         target->setAnimationOffsetX(currentX - target->getX());
         target->setAnimationOffsetY(currentY - target->getY());
     });

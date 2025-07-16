@@ -190,12 +190,16 @@ void UIWindow::setWindowHints() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    
+    glfwWindowHint(GLFW_DOUBLEBUFFER, GLFW_TRUE);
+    // 考虑添加多重采样抗锯齿
+    glfwWindowHint(GLFW_SAMPLES, 4);
     // 启用透明帧缓冲区，支持窗口透明效果
-    glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GLFW_TRUE);
+    glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GLFW_FALSE);
     
     // 创建时隐藏窗口，避免闪烁
     glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+    
+
 }
 
 /**
@@ -312,6 +316,8 @@ void UIWindow::endFrame() {
  * @description 清除颜色缓冲区、深度缓冲区和模板缓冲区
  */
 void UIWindow::clearBackground(float r, float g, float b, float a) {
+    glDisable(GL_DEPTH_TEST);
+    glDisable(GL_STENCIL_TEST);
     glClearColor(r, g, b, a);
     glClear(GL_COLOR_BUFFER_BIT); // 只清除颜色缓冲区
 }
