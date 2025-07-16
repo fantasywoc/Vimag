@@ -323,7 +323,7 @@ void VimagApp::createSettingPanel() {
     });
     std::string showExifInfoString = "Show EXIF";
     NVGcolor showExifInfoBGCOLOR = nvgRGBA(255, 255, 255, 255);
-    if(showExifInfo){
+    if(showExif){
         showExifInfoString = "Hide EXIF";
         showExifInfoBGCOLOR = nvgRGBA(0, 0, 0, 255);
     }
@@ -421,10 +421,13 @@ void VimagApp::updateImageLabels() {
                         scaleX =    scaleOrientation;
                         scaleY =    scaleOrientation;
 
-                        texture->scaleTo(scaleX,scaleOrientation,0.01);
+                        texture->scaleTo(scaleX,scaleY,0.01);
                     }else{
                         textureOrientation = 0;
                         texture->scaleTo(1,1,0.01) ;
+                        scaleX =    1.0f;
+                        scaleY =   1.0f;
+                        texture->scaleTo(scaleX,scaleY,0.01);
                     }
                     texture->rotateTo(textureOrientation,0.001);
                 }
