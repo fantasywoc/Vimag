@@ -120,10 +120,10 @@ void VimagApp::run() {
         startBackgroundDirectoryScan();
     }
     glfwSwapInterval(1); // 强制启用垂直同步
-    // 确保OpenGL设置正确
-    glEnable(GL_MULTISAMPLE); // 启用多重采样抗锯齿
-    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
-    glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
+    // // 确保OpenGL设置正确
+    // glEnable(GL_MULTISAMPLE); // 启用多重采样抗锯齿
+    // glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+    // glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
     while (!window.shouldClose()) {
         auto currentTime = glfwGetTime();
         double deltaTime = currentTime - lastTime;
@@ -405,9 +405,11 @@ void VimagApp::updateImageLabels() {
         indexLabel->setText(indexString+" -> "+ imageName + "●●● LOAD FAIL! ●●●");
     } else {
         if (!showIndex) indexString = "";
-        if (!imageNameDisplay) imageName = "";
-        label_info = indexString +" ● " + imageName + " ● " + std::to_string(texture->getImageWidth()) + "x" + std::to_string(texture->getImageHeight());
-
+        if (!imageNameDisplay){
+            imageName = "";
+        }else{
+            label_info = indexString +" ● " + imageName + " ● " + std::to_string(texture->getImageWidth()) + "x" + std::to_string(texture->getImageHeight());
+        }
         std::string exif_info;
         bool ExifInfo_S = getExifInfo(imagePaths[currentIndex].generic_string(), exif_info,textureOrientation);
         

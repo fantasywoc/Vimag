@@ -28,7 +28,7 @@ public:
         static constexpr float SCALE_STEP = 0.15f;
         static constexpr float MAX_SCALE = 13.0f;
         static constexpr float MIN_SCALE = 0.2f;
-        static constexpr double TARGET_FPS = 60.0;
+        static constexpr double TARGET_FPS = 120.0;
         static inline const NVGcolor BGCOLOR = nvgRGBA(32, 32, 32, 255);
     };
 
