@@ -10,10 +10,6 @@
 <img src="https://img.shields.io/github/languages/top/fantasywoc/Vimag?color=yellow" alt="languages-top" />
 <img src="https://img.shields.io/github/last-commit/fantasywoc/Vimag" alt="last-commit" />
 
-
-
-[![Feature Requests](https://img.shields.io/github/issues/fantasywoc/Vimag/feature-request?label=Features&color=4CC61E&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request)
-[![Bugs](https://img.shields.io/github/issues/fantasywoc/Vimag/bug?label=Bugs&color=red&logo=github)](https://github.com/fantasywoc/Vimag/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 [![Downloads](https://img.shields.io/github/downloads/fantasywoc/Vimag/total?label=Downloads)](https://github.com/fantasywoc/Vimag/releases)
 
 
