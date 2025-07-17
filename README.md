@@ -5,7 +5,7 @@
 
 <h1>VIMAG</h1>
 <h3>完全开源免费的轻量图像查看软件</h3>
-<a href="https://dyblog.online/"><img src="https://img.shields.io/badge/Author-Fantasy-orange" alt="Author" /></a>
+<a href="https://github.com/fantasywoc/Vimag?tab=readme-ov-file"><img src="https://img.shields.io/badge/Author-Fantasy-orange" alt="Author" /></a>
 <img src="https://img.shields.io/github/languages/count/fantasywoc/Vimag" alt="languages-count" />
 <img src="https://img.shields.io/github/languages/top/fantasywoc/Vimag?color=yellow" alt="languages-top" />
 <img src="https://img.shields.io/github/last-commit/fantasywoc/Vimag" alt="last-commit" />
