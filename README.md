@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/github/languages/top/fantasywoc/Vimag?color=yellow" alt="languages-top" />
 <img src="https://img.shields.io/github/last-commit/fantasywoc/Vimag" alt="last-commit" />
 
-[![Downloads](https://img.shields.io/github/downloads/fantasywoc/Vimag/total?label=Downloads)](https://github.com/fantasywoc/Vimag/releases)
+
 
 
 
@@ -175,7 +175,7 @@ xmake project -k compile_commands
 ## 📊 动态统计
 [![Stars](https://img.shields.io/github/stars/fantasywoc/Vimag?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
 [![Forks](https://img.shields.io/github/forks/fantasywoc/Vimag?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
-
+[![Downloads](https://img.shields.io/github/downloads/fantasywoc/Vimag/total?label=Downloads)](https://github.com/fantasywoc/Vimag/releases)
 ## ⭐ 星标历史 Star History
 
 <a href="https://star-history.com/#fantasywoc/Vimag&Date">
