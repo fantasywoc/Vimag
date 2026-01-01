@@ -176,18 +176,11 @@ xmake project -k compile_commands
 [![Stars](https://img.shields.io/github/stars/fantasywoc/Vimag?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
 [![Forks](https://img.shields.io/github/forks/fantasywoc/Vimag?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
 [![Downloads](https://img.shields.io/github/downloads/fantasywoc/Vimag/total?label=Downloads)](https://github.com/fantasywoc/Vimag/releases)
-## ⭐ 星标历史 Star History
 
-<a href="https://star-history.com/#fantasywoc/Vimag&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=fantasywoc/Vimag&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=fantasywoc/Vimag&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=fantasywoc/Vimag&type=Date" />
- </picture>
-</a>
 
 
 
 ## 许可证
 
 本项目采用开源许可证，具体请查看 LICENSE 文件。
+
